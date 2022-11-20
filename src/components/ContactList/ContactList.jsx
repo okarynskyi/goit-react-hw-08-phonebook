@@ -6,7 +6,7 @@ import {
   selectFilter,
   selectIsLoading,
 } from 'redux/selectors';
-import { fetchContacts, deleteContact } from 'redux/contactsOperations';
+import { fetchContacts, deleteContact } from 'redux/contacts/contactsOperations';
 import css from './ContactList.module.css'; 
 
 export const ContactList = () => {
