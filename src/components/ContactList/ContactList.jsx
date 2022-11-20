@@ -5,7 +5,7 @@ import {
   selectError,
   selectFilter,
   selectIsLoading,
-} from 'redux/selectors';
+} from 'redux/contacts/selectors';
 import { fetchContacts, deleteContact } from 'redux/contacts/contactsOperations';
 import css from './ContactList.module.css'; 
 

@@ -1,7 +1,7 @@
 import { nanoid } from '@reduxjs/toolkit';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectFilter } from 'redux/selectors';
-import { visibleContacts } from 'redux/filterSlice';
+import { selectFilter } from 'redux/contacts/selectors';
+import { visibleContacts } from 'redux/contacts/filterSlice';
 import css from './Filter.module.css';
 
 export const Filter = () => {

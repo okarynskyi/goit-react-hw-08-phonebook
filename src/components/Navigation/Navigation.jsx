@@ -1,4 +1,4 @@
-import { useAuth } from 'hooks';
+import { useAuth } from 'hooks/useAuth';
 import { NavLink } from 'react-router-dom';
 
 export const Navigation = () => {

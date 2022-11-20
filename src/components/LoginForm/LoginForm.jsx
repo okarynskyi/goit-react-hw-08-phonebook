@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading } from 'redux/contacts/contactsSelectors';
+import { selectIsLoading } from 'redux/contacts/selectors';
 import { logIn } from 'redux/auth/authOperations';
-import { FormLogin, LabelLogin, InputLogin, ButtonLogin } from './LoginForm.styled';
+
 
 
 export const LoginForm = () => {
@@ -32,7 +32,7 @@ export const LoginForm = () => {
         </label>
         <button type="submit">Log In</button>
       </form>
-      {isLoading && <Loader />}
+      {isLoading && <div>Loading page...</div>}
     </>
   );
 };
