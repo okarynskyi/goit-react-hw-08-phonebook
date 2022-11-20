@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading } from 'redux/contacts/selectors';
 import { logIn } from 'redux/auth/authOperations';
+import css from '../ContactForm/ContactForm.module.css';
 
 
 
@@ -21,16 +22,16 @@ export const LoginForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} autoComplete="off">
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Password
-          <input type="password" name="password" required />
-        </label>
-        <button type="submit">Log In</button>
+      <form onSubmit={handleSubmit} autoComplete="off" className={css.form}>
+        <div className={css.input}>
+          <label className={css.input_label}>Email</label>
+          <input className={css.input_text} type="email" name="email" required />
+        </div>
+        <div className={css.input}>
+          <label className={css.input_label}>Password</label>
+          <input className={css.input_text} type="password" name="password" required />
+        </div>        
+        <button type="submit" className={css.input_button}>Log In</button>
       </form>
       {isLoading && <div>Loading page...</div>}
     </>

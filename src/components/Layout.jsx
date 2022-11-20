@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 
 export const Layout = () => {
   return (
-    <div>
+    <div style={{ width: "400px", marginLeft: "20px", }}>
       <AppBar />
       <Suspense fallback={<div>Loading page...</div>}>
         <Outlet />

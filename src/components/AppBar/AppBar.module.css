@@ -1,0 +1,10 @@
+.appHeader {
+    width: 360px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(169, 169, 169);
+    border: 2px solid;
+}
