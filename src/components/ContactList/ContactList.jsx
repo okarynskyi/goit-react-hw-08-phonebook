@@ -25,9 +25,9 @@ export const ContactList = () => {
       return contacts;
     }
     const normalizedFilter = filter.toLocaleLowerCase();
-    const filterContacts = contacts.filter(({ name, phone }) => {
+    const filterContacts = contacts.filter(({ name, number }) => {
       const normalizedName = name.toLocaleLowerCase();
-      const normalizedNumber = phone.toLocaleLowerCase();
+      const normalizedNumber = number.toLocaleLowerCase();
       const result = normalizedName.includes(normalizedFilter) || normalizedNumber.includes(normalizedFilter);
       return result
     });
@@ -35,8 +35,8 @@ export const ContactList = () => {
   };
   const filteredContacts = getFilterContacts();
 
-  const elements = filteredContacts.map(({ name, phone, id }) => {
-        return <li key={id} className={css.list}>{name}: {phone}
+  const elements = filteredContacts.map(({ name, number, id }) => {
+        return <li key={id} className={css.list}>{name}: {number}
             <button onClick={() => dispatch(deleteContact(id))} className={css.list_button}>Delete</button>
         </li>
   })
